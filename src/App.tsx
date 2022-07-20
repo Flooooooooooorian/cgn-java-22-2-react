@@ -1,32 +1,36 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Greetings from "./Greetings";
 import Bye from "./Bye";
+import Greetings from "./Greetings";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit TEST <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
 
-        <Greetings />
-        <Bye />
+    const userNames: string[] = ["Thomas", "Dominic", "Fabian", "Florian"];
 
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo"/>
+                <p>
+                    Edit TEST <code>src/App.tsx</code> and save to reload.
+                </p>
+                <a
+                    className="App-link"
+                    href="https://reactjs.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Learn React
+                </a>
+
+                {userNames.map((item) => <Greetings name={item}/>)}
+
+                <Bye/>
+
+            </header>
+        </div>
+    );
 }
 
 export default App;

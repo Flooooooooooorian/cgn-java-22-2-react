@@ -1,14 +1,20 @@
+type GreetingsProps = {
+    name: string
+}
 
+export default function Greetings(props: GreetingsProps) {
 
-export default function Greetings() {
-
-    console.log("Hallo Welt")
-
+    console.log("test")
     return (
-        <div>
-            <p>
-                Hallo Welt
-            </p>
-        </div>
+        <>
+            <div>
+                <p>
+                    Hallo {props.name}
+                </p>
+            </div>
+            <div>
+
+            </div>
+        </>
     )
 }
